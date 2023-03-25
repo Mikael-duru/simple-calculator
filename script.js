@@ -12,6 +12,40 @@ calculatorBtns.forEach(btn => {
     else if (btn.id === "equal") {
       result();
     }
+    else if (btn.id === "!"){
+      let i;
+      let num = displayResult.value;
+      let f = 1;
+      for (i = 1; i <= num; i++){
+        f *= i
+      };
+
+      displayResult.value = f;
+    }
+    else if (btn.id === "sin"){
+      displayResult.value = Math.sin(displayResult.value);
+    }
+    else if (btn.id === "cos"){
+      displayResult.value = Math.cos(displayResult.value);
+    }
+    else if (btn.id === "tan"){
+      displayResult.value = Math.tan(displayResult.value);
+    }
+    else if (btn.id === "log"){
+      displayResult.value = Math.log(displayResult.value);
+    }
+    else if (btn.id === "e"){
+      displayResult.value += 2.718;
+    }
+    else if (btn.id === "pi"){
+      displayResult.value += 3.14;
+    }
+    else if (btn.id === "pow"){
+      displayResult.value = Math.pow(displayResult.value, 2);
+    }
+    else if (btn.id === "sqrt"){
+      displayResult.value = Math.sqrt(displayResult.value, 2);
+    }
     else {
       displayResult.value += btn.id;
     }
